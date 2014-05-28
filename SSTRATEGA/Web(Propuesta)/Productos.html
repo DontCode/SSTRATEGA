@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="css/Productos.css" />
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/estilos.css" />
+
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/jquery.scrollorama.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400|Arimo|Raleway:400,100' rel='stylesheet' type='text/css'>
+
+<script>
+		menuFixed();
+		
+		$(window).scroll(function(){
+				menuFixed();
+			});
+			
+			function menuFixed(){
+				var altura_header = $('nav').outerHeight(true);
+				var altura_menu = $('.menuProductos').outerHeight(true);
+				
+				if($(window).scrollTop() >= altura_header){
+					$('.menuProductos').addClass('sticky');
+					$('.content').css('margin-top', (altura_menu) + 'px');
+				}else{
+					$('.menuProductos').removeClass('sticky');
+					$('.content').css('margin-top','0');
+				}
+			}
+</script>
+
+<script>
+	$(document).ready(function(){
+		$('.flechaUp').hide();
+		
+		$(function(){
+			$(window).scroll(function(){
+				if($(this).scrollTop()>80){
+					$('.flechaUp').fadeIn('slow',function(){
+						$(this).css('transform', 'translate(0px, 50px)');
+					});
+				}else if($(this).scrollTop()>20){
+					$('.flechaUp').fadeOut('slow'); 
+				}
+			});
+		})
+	});
+</script>
+	<title>Productos</title>
+</head>
+<body>
+	<header id="header">
+		<div class="logo"><a href="Index.html" class="imgLogo">
+			<img src="img/logo3.png"/>
+		</a>
+		</div>
+
+	</header>
+	<nav>
+		<ul>
+			<li><a href="#">Productos</a></li>
+			<li><a href="#">Intelligence</a></li>
+			<li><a href="#">Clientes</a></li>
+			<li><a href="#">Equipo</a></li>
+			<li><a href="#">Soporte</a></li>
+			<li><a href="#">Help Desk</a></li>
+		</ul>
+	</nav>
+	<ul class="menuProductos">
+		<li><a class="scroll" href="#magnus">Magnus Erp</a></li>
+		<li><a class="scroll" href="#simac">Simac</a></li>
+		<li><a class="scroll" href="#intelligence">Intelligence<a></li>
+		<li><a class="scroll" href="#conta">Magnus Conta<a></li>
+	</ul>
+	<section class="mainProductos" style="position:relative;z-index:-2;">
+		<article class="imagensota">
+			
+		</article>
+		
+		<div class="scroller"></div>
+
+		<article class="productosSnap">
+		<a href="#header"><div class="flechaUp">
+		</div></a>
+			<article id="magnus" class="products">
+				<p class="headerProducts">Magnus Erp</p>
+				<div class="video">	
+					<img src="img/Cajatransparencia.png" alt="Magnus Erp" />
+				</div>
+				<div class="texto">
+					<p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+				</div>
+				<div class="scroller"></div>
+
+			</article>
+			<article id="simac" class="products">
+				<p class="headerProducts">Simac</p>
+				<div class="video">
+					<img src="img/Cajatransaprencia.png" />
+				</div>
+				<div class="texto">
+					<p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+				</div>
+				<div class="scroller2"></div>
+			</article>
+			<article id="intelligence" class="products">
+				<p>intelligence</p>
+					<div class="video">
+					
+				</div>
+				<div class="texto">
+					
+				</div>
+				<div class="scroller3"></div>
+			</article>
+			<article id="conta" class="products">
+				<p>conta</p>
+					<div class="video">
+					
+				</div>
+				<div class="texto">
+					
+				</div>
+			</article>
+		</article>
+			<footer>
+			<div class="listas">
+				<div class="encabezadoListas">
+					<p>Productos</p>
+				</div>
+				<ul class="lista">
+					<li><a href="">Magnus</a></li>
+					<li><a href="">Simac</a></li>
+					<li><a href="">Intelligence</a></li>
+					<li><a href="">Conta</a></li>
+					<li><a href="">Tenerías</a></li>
+				</ul>
+			</div>
+			<div class="listas">
+				<div class="encabezadoListas">
+					<p>Contacto</p>
+				</div>
+				<ul class="lista">
+					<li><a href="">Help Desk</a></li>
+					<li><a href="">Contáctanos</a></li>
+					<li><a href="">Danos tu Opinión</a></li>
+				</ul>
+			
+			</div>
+		<div class="listas">
+			<div class="social">
+				<p>Síguenos</p>
+				<li><a href="">Item1</a></li>
+				<li><a href="">Item2<a></li>
+				<li><a href="">Item3<a></li>
+				<li><a href="">Item3<a></li>
+				<li><a href="">Item3<a></li>
+			</div>
+		</div>
+		</footer>
+	</section>
+
+<script>
+	$(function(){
+		$('.scroll').on('click', function(e){
+			e.preventDefault();
+			var strAncla=$(this).attr('href');
+			
+			$('body,html').stop(true,true).animate({
+				scrollTop: $(strAncla).offset().top
+				},700);
+		});
+	});
+</script>
+
+<script>
+	$(function(){
+		$('.flechaUp').on('click', function(e){
+			e.preventDefault();
+			var upper = $(this).attr('href');
+			
+			$('body,html').stop(true,true).animate({
+				scrollTop:0
+			},800);
+		});
+	});
+</script>
+<!--<script>
+	$(document).ready(function(){
+		scrollorama.animate('.products',{
+			duration:400, property:'opacity'
+		})
+	});
+</script>-->
+</body>
+</html>
